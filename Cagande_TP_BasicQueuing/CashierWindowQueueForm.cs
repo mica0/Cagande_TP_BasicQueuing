@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Cagande_TP_BasicQueuing
 {
-    public partial class Form1 : Form
+    public partial class CashierWindowQueueForm : Form
     {
-        public Form1()
+        public CashierWindowQueueForm()
         {
             InitializeComponent();
         }
-
-       
     }
 }
