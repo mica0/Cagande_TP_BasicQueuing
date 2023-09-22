@@ -37,27 +37,30 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.Color.LightPink;
             this.btnRefresh.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(12, 29);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(134, 45);
             this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // btnNext
             // 
+            this.btnNext.BackColor = System.Drawing.Color.LightPink;
             this.btnNext.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(12, 80);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(134, 45);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // listCashierQueue
             // 
+            this.listCashierQueue.BackColor = System.Drawing.Color.LightPink;
             this.listCashierQueue.FormattingEnabled = true;
             this.listCashierQueue.ItemHeight = 16;
             this.listCashierQueue.Location = new System.Drawing.Point(152, 12);
@@ -73,6 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(476, 436);
             this.Controls.Add(this.listCashierQueue);
             this.Controls.Add(this.btnNext);

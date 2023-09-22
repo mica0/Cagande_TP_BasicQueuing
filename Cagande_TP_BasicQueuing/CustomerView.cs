@@ -16,5 +16,10 @@ namespace Cagande_TP_BasicQueuing
         {
             InitializeComponent();
         }
+
+        private void lblServing_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

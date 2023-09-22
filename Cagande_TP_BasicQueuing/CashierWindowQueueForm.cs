@@ -13,22 +13,23 @@ namespace Cagande_TP_BasicQueuing
 {
     public partial class CashierWindowQueueForm : Form
     {
-        private CustomerView CView;
+        public CustomerView cv;
         private Timer timer;
         public CashierWindowQueueForm()
         {
             InitializeComponent();
             InitializeTimer();
 
-
             Timer timer = new Timer();
             timer.Interval = (1 * 1000);
             timer.Tick += new EventHandler(timer1_Tick);
             timer.Start();
 
-            CView = new CustomerView();
-            CView.Show();
+            cv = new CustomerView();
+            cv.Show();
+
         }
+
         private void InitializeTimer()
         {
             Timer timer = new Timer();
@@ -63,26 +64,27 @@ namespace Cagande_TP_BasicQueuing
             DisplayCashierQueue(CashierClass.CashierQueue);
         }
 
-        
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            DisplayCashierQueue(CashierClass.CashierQueue);
-        }
-
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (CashierClass.CashierQueue.Count != null && CashierClass.CashierQueue.Count > 0)
+           if (CashierClass.CashierQueue.Count != 0)
             {
                 if (CashierClass.CashierQueue.Contains(CashierClass.CashierQueue.Peek()))
                 {
                     string s = CashierClass.CashierQueue.Peek();
+                    cv.lblServing.Text = CashierClass.CashierQueue.Peek();
                 }
-                CashierClass.CashierQueue.Dequeue();
+                    CashierClass.CashierQueue.Dequeue();
             }
             else
             {
                 MessageBox.Show("The queue is empty.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+       
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DisplayCashierQueue(CashierClass.CashierQueue);
         }
     }
 }

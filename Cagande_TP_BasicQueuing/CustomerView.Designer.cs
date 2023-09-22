@@ -51,11 +51,13 @@
             this.lblServing.Size = new System.Drawing.Size(218, 44);
             this.lblServing.TabIndex = 1;
             this.lblServing.Text = "Show number";
+            this.lblServing.Click += new System.EventHandler(this.lblServing_Click);
             // 
             // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(447, 272);
             this.Controls.Add(this.lblServing);
             this.Controls.Add(this.label1);
@@ -69,6 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblServing;
+        public System.Windows.Forms.Label lblServing;
     }
 }
